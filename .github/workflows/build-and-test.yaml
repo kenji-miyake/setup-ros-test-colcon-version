@@ -27,6 +27,10 @@ jobs:
           apt-get -y update
           apt-get -y install python3-pip
 
+      - name: Update colcon-package-selection
+        run: |
+          pip3 install -U colcon-package-selection
+
       - name: Search packages in this repository
         id: list_packages
         run: |
